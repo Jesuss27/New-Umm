@@ -1,6 +1,9 @@
 import Nav from "./components/Nav.js"
 import Landing  from "./pages/Landing.js"
-import{ connect, Global, css } from "frontity"
+import{ connect, Global, css, styled } from "frontity"
+import p from "./processors/paragraph"
+import input from "./processors/input"
+
 
 
 
@@ -58,6 +61,18 @@ export default {
     theme: {}
   },
   actions: {
-    theme: {}
+    theme: {
+      beforeSSR: async( { actions  }) =>{
+        await actions.source.fetch("/contact");
+      }
+    }
+  },
+  libraries : {
+    html2react: {
+      processors: [p, input]
+    }
+
   }
 };
+
+

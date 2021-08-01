@@ -68,7 +68,7 @@ const BannerContainer = styled.div`
                 height:24rem;
                 background-color:var(--color-secondary);
                 margin:1rem 2rem;
-                border-radius:0.8rem;  
+                border-radius:1.5rem;  
                 box-shadow: 3px 3px 6px #DCDCDC; 
                 transition: all .2s ease;  
                          
@@ -78,8 +78,8 @@ const BannerContainer = styled.div`
                         letter-spacing: 0.6rem;
                     }
                     .svg-container{
-                        width:50%;
-                        height:50%;
+                        width:20%;
+                        height:20%;
                         svg{
                             width:100%;
                             height:100%;
@@ -93,8 +93,12 @@ const BannerContainer = styled.div`
         }
     }
     @media(min-width:600px){
+        display:flex;
+        justify-content: center;
+        align-items: center;
         .cards{
             display:flex;
+            width:80%;
             align-items: center;
             justify-content: space-around;
             flex-direction: row;
