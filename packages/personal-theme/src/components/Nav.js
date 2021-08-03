@@ -3,7 +3,7 @@ import { styled } from "frontity"
 import  { TiSocialInstagram } from "react-icons/ti";
 import  { TiSocialFacebook } from "react-icons/ti";
 import  { TiSocialYoutube } from "react-icons/ti";
-import {GiHamburgerMenu} from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 
@@ -59,6 +59,9 @@ const StyledNav = styled.div`
     height:8vh;
     background:aliceblue;
     color:var(--color-text);
+    li{
+        font-size:1.6rem;
+    }
     .mobile-nav{
         width:100%;
         display:flex;
