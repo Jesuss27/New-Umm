@@ -18,14 +18,38 @@ function ContactForm( { state, libraries }) {
 export default connect(ContactForm)
 
 const StyledForm = styled.div`
-    max-width:80%;
+    *{
+        max-width:100%;
+        color:var(--color-text)
+    }
+  
 input{
-    border-radius: 20px;
+    border-radius: 10px;
+    padding:1ch;
+    height:3ch;
+    border: 1px solid #707070;
+
+
 }
 textarea{
     border-radius: 10px;
+    padding:1ch;
 }
 label{
     margin-left:.5rem;
+    
+}
+.wpcf7-submit{
+    background:var(--color-secondary-bg);
+    color:black;
+    width:100%;
+    padding:1ch;
+    transition: all 0.2s ease;
+    border:none;
+    :hover{
+        background: #ffc69d;
+    }
+
+
 }
 `

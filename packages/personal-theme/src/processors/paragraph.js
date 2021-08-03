@@ -3,6 +3,8 @@ import {styled} from "frontity"
 
 const P = styled.p`
     color:white;
+    letter-spacing: .2rem;
+    margin-top:1rem;
 
 `
 

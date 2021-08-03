@@ -2,6 +2,10 @@ import React from 'react'
 import { styled } from "frontity"
 import background from "../Images/background.jpg"
 import ContactForm from './ContactForm'
+import { GrLocationPin } from "react-icons/gr";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 
 
 export default function Opt() {
@@ -13,16 +17,34 @@ export default function Opt() {
                </path>
             </svg>
 
-            <div className="big-text">
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
+            <div className="info-container">
+
+                <div className="big-text">
+                    <h1>THIS IS A</h1>
+                    <h1>BIG TITLE</h1>
+                    <h1>TEXT AND CAN</h1>
+                </div>
+
+
+                <div className="form-container">
+                    <h1>STAY IN TOUCH</h1>
+                    <ul>
+                        <li>
+                            <GrLocationPin />
+                            <h3>91911 Dolor St. San Diego, CA</h3>
+                        </li>
+                        <li>
+                            <FaPhoneAlt />
+                            <h3>619-234-7791</h3>
+                        </li>
+                        <li>
+                            <MdEmail />
+                            <h3>umm@gmail.com</h3>
+                        </li>
+                    </ul>
+                    <ContactForm />
             </div>
 
-
-            <div className="form-container">
-                <h1>STAY IN TOUCH</h1>
-                <ContactForm />
             </div>
 
 
@@ -32,14 +54,88 @@ export default function Opt() {
 }
 
 const OptContainer = styled.div`
-    height:120vh;
+    @media(min-width:1em){
+
+    height:150vh;
     width:100%;
     background-image: url(${background}) ;
     background-size: cover;
-    .form-container{
-        padding:2rem;
-        background:grey;
+    .big-text{
+        display:none;
     }
+    .info-container{
+        color:var(--color-text);
+        padding:0rem 2rem 0rem 2rem;
+        height:100vh;
+        overflow:auto;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    .form-container{
+        height:80%;
+        h1{
+            text-align:center;
+            font-family:rockwell;
+        }
+        ul{
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            li{
+                display:flex;
+                width:70%;
+                list-style: none;
+                margin-top:1rem;
+                h3{
+                    margin-left:2rem;
+                }
+            }
+        }
+        max-width:80%;
+        height:auto;
+        padding:2rem ;
+        background: rgba(255, 255, 255, .7);
+        backdrop-filter: blur(10px);
+        border-radius:33px;
+        border: 1px solid #707070 ;
+    }
+}
+}
+
+@media(min-width:600px){
+    .info-container{
+        justify-content: space-around;
+    }
+    .big-text{
+        display:block;
+        h1{
+            font-size:42px;
+            margin-top:3rem;
+            font-family:rockwell;
+        }
+    }
+}
+
+@media(min-width:800px){
+    .big-text{
+        h1{
+            font-size:68px;
+            margin-top:3rem;
+            font-family:rockwell;
+        }
+    }
+}
+
+@media(min-width:1400px){
+    .big-text{
+        h1{
+            font-size:75px;
+            margin-top:3rem;
+            font-family:rockwell;
+        }
+    }
+}
 
 `
 

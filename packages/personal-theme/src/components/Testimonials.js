@@ -16,7 +16,7 @@ export default function Testimonials() {
                 <div className="row">
                     <div className="col">
                         <div className="testimonial">
-                            <img src={background} alt="" />
+                            <img src={portrait1} alt="" />
                             <div className="name">Full Name</div>
                             <div className="title">Title</div>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -67,7 +67,7 @@ const TestimonialsContainer = styled.div`
         h1{
             font-family: rockwell;
             font-style: italic;
-            font-size:6.2rem;
+            font-size:var(--s-header);
             color:black
         }
         .border{
