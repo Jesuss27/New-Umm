@@ -4,6 +4,7 @@ import  { TiSocialInstagram } from "react-icons/ti";
 import  { TiSocialFacebook } from "react-icons/ti";
 import  { TiSocialYoutube } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Link from "@frontity/components/link"
 
 
 
@@ -28,12 +29,12 @@ export default function Nav() {
                 </div>
 
                 <div className="logo">
-                    <h1>UMM</h1>
+                    <h1><Link link="/">UMM</Link></h1>
                 </div>
 
                 <div className="links">
                     <ul>
-                        <li>About</li>
+                        <li><Link link="/about">About</Link></li>
                         <li>Blog</li>
                         <li>Schedule</li>
                     </ul>
