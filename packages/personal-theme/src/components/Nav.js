@@ -35,7 +35,7 @@ export default function Nav() {
                 <div className="links">
                     <ul>
                         <li><Link link="/about">About</Link></li>
-                        <li>Blog</li>
+                        <li><Link link="/blog">Blog</Link></li>
                         <li>Schedule</li>
                     </ul>
                 </div>

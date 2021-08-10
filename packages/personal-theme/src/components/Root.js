@@ -4,6 +4,7 @@ import{ connect, Global, css, styled } from "frontity"
 import Footer from "./Footer"
 import Switch from "@frontity/components/switch"
 import About from "../pages/About"
+import Blogs from "../pages/Blogs"
 
 
 
@@ -51,6 +52,7 @@ const Root = ( { state }) => {
       <Nav />
       <Switch>
         <About when={data.link === "/about/"}/>
+        <Blogs when={data.link === "/blog/" }/>
         <Landing when={data.link === "/"} />
       </Switch>
       <Footer />

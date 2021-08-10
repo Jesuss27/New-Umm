@@ -113,6 +113,7 @@ const StyledMobileFooter = styled.div`
             justify-content:space-between;
             p{
                 font-size: var(--med-text-s) ;
+                max-width: 25ch;
             }
             button{
                 width:30%;
