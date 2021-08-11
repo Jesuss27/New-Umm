@@ -11,8 +11,9 @@ import Blogs from "../pages/Blogs"
 
 
 const Root = ( { state }) => {
-  const data = state.source.get(state.router.link)
-  console.log(data.link)
+  const data = state.source.get(state.router.link);
+  
+
 
   return (
     <>

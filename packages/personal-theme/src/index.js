@@ -11,8 +11,9 @@ export default {
   },
   actions: {
     theme: {
-      beforeSSR: async( { actions  }) =>{
+      beforeSSR: async( { state, actions  }) =>{
         await actions.source.fetch("/contact");
+        await actions.source.fetch("/");
       }
     }
   },

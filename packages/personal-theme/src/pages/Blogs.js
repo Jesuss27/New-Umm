@@ -1,12 +1,26 @@
 import React from 'react'
+import { connect, } from "frontity"
+import Link from "@frontity/components/link"
+import Post from "../components/Post"
 
-function Blogs() {
+
+function Blogs( { state , actions }) {
+    const data = state.source.get("/")    
     return (
         <div>
-            Here is the Blog Page
+            {data.items.map(item => {
+                const post = state.source[item.type][item.id]
+                return (
+                    <div key={item.id}>
+                        <Link link={item.link}>
+                            <Post post={post} />
+                        </Link>
+                    </div>
+                )
+            })}
             
         </div>
     )
 }
 
-export default Blogs
+export default connect(Blogs)
