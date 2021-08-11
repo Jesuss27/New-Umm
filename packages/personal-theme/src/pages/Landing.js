@@ -4,7 +4,7 @@ import Checklist from "../components/Checklist"
 import Cards from "../components/Cards.js"
 import Testimonials from "../components/Testimonials.js"
 import Opt from "../components/Opt.js"
-import { styled } from "frontity"
+import { styled, conncect } from "frontity"
 
 
 
