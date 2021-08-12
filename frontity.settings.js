@@ -8,7 +8,13 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "http://localhost:150/wordpress-network/wordpress"
+          "url": "http://localhost:150/wordpress-network/wordpress",
+          postsPage: "/blog",
+          homepage:"/",
+          params:{
+            per_page: 5,
+            type: ["post", "page"]
+          }
         }
       }
     },

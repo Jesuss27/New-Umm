@@ -2,10 +2,11 @@ import React from 'react'
 import { connect, } from "frontity"
 import Link from "@frontity/components/link"
 import Post from "../components/Post"
+import Pagination from "../components/Pagination"
 
 
 function Blogs( { state , actions }) {
-    const data = state.source.get("/")    
+    const data = state.source.get(state.router.link)
     return (
         <div>
             {data.items.map(item => {
@@ -13,11 +14,15 @@ function Blogs( { state , actions }) {
                 return (
                     <div key={item.id}>
                         <Link link={item.link}>
-                            <Post post={post} />
+                            {post.title.rendered}
                         </Link>
+
+                        
                     </div>
+                    
                 )
             })}
+            <Pagination />
             
         </div>
     )

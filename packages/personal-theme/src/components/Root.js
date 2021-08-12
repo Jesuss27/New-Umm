@@ -5,6 +5,7 @@ import Footer from "./Footer"
 import Switch from "@frontity/components/switch"
 import About from "../pages/About"
 import Blogs from "../pages/Blogs"
+import Post from "../components/Post"
 
 
 
@@ -52,9 +53,12 @@ const Root = ( { state }) => {
 
       <Nav />
       <Switch>
+        <Landing when={data.isHome} />
         <About when={data.link === "/about/"}/>
-        <Blogs when={data.link === "/blog/" }/>
-        <Landing when={data.link === "/"} />
+        <Blogs  when ={data.isPostArchive}/>
+        <Post when= {data.isPost} />
+        
+        
       </Switch>
       <Footer />
       
