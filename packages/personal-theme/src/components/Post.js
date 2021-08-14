@@ -4,7 +4,7 @@ import { connect } from "frontity"
 function Post( { state } ) {
     const data = state.source.get(state.router.link);
     const post = state.source[data.type][data.id];
-    console.log(post);
+    
     
     return (
         <div>
