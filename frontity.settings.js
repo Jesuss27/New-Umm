@@ -12,7 +12,7 @@ const settings = {
           postsPage: "/blog",
           homepage:"/",
           params:{
-            per_page: 5,
+            per_page: 3,
             type: ["post", "page"]
           }
         }
