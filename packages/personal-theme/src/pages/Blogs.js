@@ -25,7 +25,7 @@ function Blogs( { state , actions }) {
                 return (
                     <div className="listing" key={item.id}>
 
-                            <Link link={item.link}>
+                            <Link className="img" link={item.link}>
                                 <img src={imgUrl} alt="" />
                             </Link>
                             <div className="info">
@@ -42,16 +42,20 @@ function Blogs( { state , actions }) {
             }else{
                 return(
                     <div className="listing-reversed" key={item.id}>
-                        <Link link={item.link}>
-                                <img src="" alt="" />
+
+                            <Link className="img" link={item.link}>
+                                <img src={imgUrl} alt="" />
                             </Link>
-                            <h1>{post.title.rendered}</h1>
-                            <div dangerouslySetInnerHTML={{__html:excerpt}}></div>
-                            
-                            <Link link={item.link}>
-                                <p>Read More</p>
-                            </Link>
-                    </div> 
+                            <div className="info">
+                                <h1>{post.title.rendered}</h1>
+                                <div dangerouslySetInnerHTML={{__html:excerpt}}></div>
+                                
+                                <Link link={item.link}>
+                                    <p>Read More</p>
+                                </Link>
+                            </div>
+                        
+                    </div>   
                 )
             }
             })}
@@ -64,7 +68,7 @@ function Blogs( { state , actions }) {
 export default connect(Blogs)
 
 const StlyedBlogPage = styled.div`
-    padding:2rem;
+    padding:0rem 2rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -78,33 +82,57 @@ const StlyedBlogPage = styled.div`
                 display:none;
             }
         }
-        a{
-            width:60vw;
-        img{
-            width:100%;
-            height:90%;
-            object-fit: cover;
-        }
+        .img{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:60%;
+            img{
+                width:100%;
+                height:90%;
+                object-fit: cover;
+            }
     }
         .info{
-            width:30vw;
+            width:40%;
             display:flex;
             flex-direction:column;
             justify-content: space-around;
-            margin-left:2rem;
+            padding:2rem;
         }
     }
 
     .listing-reversed{
+        display:flex;
+        flex-direction: row-reverse;
         width:100%;
         height:92vh;
         .excerpt{
+            font-size:2rem;
             a{
                 display:none;
             }
         }
-
-
+        .img{
+            width:60vw;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            img{
+                width:100%;
+                height:90%;
+                object-fit: cover;
+            }
+    }
+        .info{
+            padding:2rem;
+            width:40vw;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-around;
+            align-items: left;
+          
+        }
     }
 `
 
